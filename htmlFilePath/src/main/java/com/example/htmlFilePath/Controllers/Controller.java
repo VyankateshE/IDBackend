@@ -97,7 +97,7 @@ public class Controller {
     public String showHtmlById(@PathVariable("id") Integer id) {
         String basePath = "C:\\Users\\Ariantech 01\\eclipse-workspace\\InteractiveDesignLatest-main\\htmlFilePath\\HtmlDownloads\\";
         String filePath = basePath + id + "_downloadable_html.html"; // Example: 1_editable_html.html, 2_editable_html.html, etc.
-
+          System.out.println(filePath);
         try {
             byte[] bytes = Files.readAllBytes(Paths.get(filePath));
             String htmlContent = new String(bytes);
